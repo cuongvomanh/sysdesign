@@ -44,7 +44,7 @@ public class BankAccountInMemoryDB implements BankAccountGateway {
         while (iterator.hasNext()) {
             Map.Entry entry = (Map.Entry) iterator.next();
             BankAccount account = (BankAccount) entry.getValue();
-            if(account.getNumber().equals(number)) {
+            if (account.getNumber().equals(number)) {
                 return account;
             }
         }

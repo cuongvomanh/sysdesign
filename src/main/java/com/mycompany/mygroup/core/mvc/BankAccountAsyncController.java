@@ -1,6 +1,5 @@
 package com.mycompany.mygroup.core.mvc;
 
-import com.mycompany.mygroup.core.entity.BankAccount;
 import com.mycompany.mygroup.core.infra.di.DependencyResolver;
 import com.mycompany.mygroup.core.usecase.RequestModel;
 import com.mycompany.mygroup.core.usecase.ResponseModel;
