@@ -1,4 +1,8 @@
+package com.mycompany.mygroup.core.gateway;
+
+import com.mycompany.mygroup.core.entity.BankAccount;
+
 public interface EntityGateway {
-    public void save(T entity);
-    public T getById(int id);
+    public void save(BankAccount entity);
+    public BankAccount getById(int id);
 }

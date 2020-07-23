@@ -1,7 +1,9 @@
 
 package com.mycompany.mygroup.core.usecase.account;
+import com.mycompany.mygroup.core.usecase.RequestModel;
+import com.mycompany.mygroup.core.usecase.ResponseModel;
 public interface BankAccountBoundary {
-    public BankAccountWithdrawResponseModle withdraw(BankAccountWithdrawRequestModel request);
-    public BankAccountDepositResponseModle withdraw(BankAccountDepositRequestModel request);
+    public ResponseModel withdraw(RequestModel request);
+    public ResponseModel deposit(RequestModel request);
 }
 

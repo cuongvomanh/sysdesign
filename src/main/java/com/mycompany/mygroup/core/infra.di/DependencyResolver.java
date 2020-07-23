@@ -1,5 +1,11 @@
 package com.mycompany.mygroup.core.infra.di;
 
+import javax.management.InstanceNotFoundException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class DependencyResolver {
     private static final String IOC_CONFIGURATION_FILE_NAME = "ioc.properties";
     public static Object getInstance(String key) throws InstanceNotFoundException {
