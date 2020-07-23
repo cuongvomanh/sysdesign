@@ -2,8 +2,10 @@ package com.mycompany.mygroup;
 
 import com.mycompany.mygroup.core.infra.di.DependencyResolver;
 import com.mycompany.mygroup.core.mvc.IBankAccountController;
+import com.mycompany.mygroup.core.usecase.ResponseModel;
 
 import javax.management.InstanceNotFoundException;
+import javax.xml.ws.Response;
 import java.math.BigDecimal;
 
 /**
@@ -16,6 +18,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         IBankAccountController controller = (IBankAccountController) DependencyResolver.getInstance("IBankAccountController");
-        controller.withdraw("1", new BigDecimal(12));
+        ResponseModel responseModel = controller.withdraw("001", new BigDecimal(12));
+        System.out.println("Response: " + responseModel.getResult());
     }
 }

@@ -12,7 +12,6 @@ public class DependencyResolver {
         try (InputStream input = new FileInputStream(IOC_CONFIGURATION_FILE_NAME)) {
             Properties prop = new Properties();
             prop.load(input);
-            
             String className = prop.getProperty(key);
             return Class.forName(className).newInstance();
         } catch (IOException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {

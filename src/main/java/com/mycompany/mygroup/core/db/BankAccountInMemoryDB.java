@@ -5,6 +5,7 @@ import com.mycompany.mygroup.core.gateway.BankAccountGateway;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class BankAccountInMemoryDB implements BankAccountGateway {
@@ -35,7 +36,18 @@ public class BankAccountInMemoryDB implements BankAccountGateway {
 
     }
 
+    public BankAccountInMemoryDB() {
+    }
+
     public BankAccount getByNumber(String number) {
+        Iterator iterator = accountDB.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry entry = (Map.Entry) iterator.next();
+            BankAccount account = (BankAccount) entry.getValue();
+            if(account.getNumber().equals(number)) {
+                return account;
+            }
+        }
         return null;
     }
 
