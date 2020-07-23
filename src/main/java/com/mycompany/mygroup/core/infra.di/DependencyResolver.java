@@ -10,7 +10,7 @@ public class DependencyResolver {
     private static final String IOC_CONFIGURATION_FILE_NAME = "ioc.properties";
     public static Object getInstance(String key) throws InstanceNotFoundException {
         try (InputStream input = new FileInputStream(IOC_CONFIGURATION_FILE_NAME)) {
-            Properties prop = new Properties():
+            Properties prop = new Properties();
             prop.load(input);
             
             String className = prop.getProperty(key);
