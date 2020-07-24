@@ -18,7 +18,7 @@ public class BankAccount extends Entity {
         this.balance = balance;
     }
     public boolean withdraw(BigDecimal amount) {
-        if(amount.compareTo(BigDecimal.ZERO) <= 0) {
+        if(amount.compareTo(BigDecimal.ZERO) <= 0 || amount.compareTo(this.balance) > 0) {
             return false;
         }
         balance = balance.subtract(amount);

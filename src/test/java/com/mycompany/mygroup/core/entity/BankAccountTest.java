@@ -12,6 +12,7 @@ public class BankAccountTest extends TestCase {
         put(10, 90);
         put(-10, 100);
         put(-200, 100);
+        put(200, 100);
     }};
     private final HashMap<Integer, Integer> depositTestCaseMap = new HashMap<Integer, Integer>() {{
         put(10, 110);
