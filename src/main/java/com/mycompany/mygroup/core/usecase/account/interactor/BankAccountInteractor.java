@@ -2,7 +2,7 @@ package com.mycompany.mygroup.core.usecase.account.interactor;
 
 import com.mycompany.mygroup.core.entity.BankAccount;
 import com.mycompany.mygroup.core.gateway.BankAccountGateway;
-import com.mycompany.mygroup.core.infra.di.DependencyResolver;
+import com.mycompany.mygroup.core.infradi.DependencyResolver;
 import com.mycompany.mygroup.core.usecase.RequestModel;
 import com.mycompany.mygroup.core.usecase.ResponseModel;
 import com.mycompany.mygroup.core.usecase.account.BankAccountBoundary;

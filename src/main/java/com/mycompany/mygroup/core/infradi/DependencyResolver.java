@@ -1,4 +1,4 @@
-package com.mycompany.mygroup.core.infra.di;
+package com.mycompany.mygroup.core.infradi;
 
 import javax.management.InstanceNotFoundException;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class DependencyResolver {
-    private static final String IOC_CONFIGURATION_FILE_NAME = "ioc.properties";
+    private static final String IOC_CONFIGURATION_FILE_NAME = "/home/cuong/Staff/sysdesign/ioc.properties";
     public static Object getInstance(String key) throws InstanceNotFoundException {
         try (InputStream input = new FileInputStream(IOC_CONFIGURATION_FILE_NAME)) {
             Properties prop = new Properties();

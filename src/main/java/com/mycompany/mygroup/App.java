@@ -1,6 +1,6 @@
 package com.mycompany.mygroup;
 
-import com.mycompany.mygroup.core.infra.di.DependencyResolver;
+import com.mycompany.mygroup.core.infradi.DependencyResolver;
 import com.mycompany.mygroup.core.mvc.IBankAccountController;
 import com.mycompany.mygroup.core.usecase.ResponseModel;
 

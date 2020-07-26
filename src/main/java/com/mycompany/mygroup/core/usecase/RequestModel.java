@@ -6,6 +6,9 @@ public class RequestModel {
     private String accountNumber;
     private BigDecimal ammount;
 
+    public RequestModel() {
+    }
+
     public RequestModel(String accountNumber, BigDecimal ammount) {
         this.accountNumber = accountNumber;
         this.ammount = ammount;

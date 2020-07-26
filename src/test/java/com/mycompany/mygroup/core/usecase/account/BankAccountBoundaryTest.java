@@ -1,6 +1,6 @@
 package com.mycompany.mygroup.core.usecase.account;
 
-import com.mycompany.mygroup.core.infra.di.DependencyResolver;
+import com.mycompany.mygroup.core.infradi.DependencyResolver;
 import com.mycompany.mygroup.core.usecase.RequestModel;
 import com.mycompany.mygroup.core.usecase.ResponseModel;
 import junit.framework.TestCase;

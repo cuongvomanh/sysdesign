@@ -1,7 +1,7 @@
 package com.mycompany.mygroup.core.gateway;
 
 import com.mycompany.mygroup.core.entity.BankAccount;
-import com.mycompany.mygroup.core.infra.di.DependencyResolver;
+import com.mycompany.mygroup.core.infradi.DependencyResolver;
 import junit.framework.TestCase;
 
 import javax.management.InstanceNotFoundException;
