@@ -1,8 +1,6 @@
 package com.mycompany.mygroup.core.gateway;
 
-import com.mycompany.mygroup.core.entity.BankAccount;
-
-public interface EntityGateway {
-    public void save(BankAccount entity);
-    public BankAccount getById(int id);
+public interface EntityGateway<T> {
+    public Long save(T entity);
+    public T findOne(Long id);
 }

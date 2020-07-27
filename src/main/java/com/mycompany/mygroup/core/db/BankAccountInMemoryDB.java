@@ -14,24 +14,24 @@ public class BankAccountInMemoryDB implements BankAccountGateway {
     static {
         {
             BankAccount account = new BankAccount();
-            account.setId(1);
+            account.setId(1L);
             account.setNumber("001");
             account.setBalance(BigDecimal.valueOf(100000));
-            accountDB.put(1, account);
+            accountDB.put(1L, account);
         }
         {
             BankAccount account = new BankAccount();
-            account.setId(2);
+            account.setId(2L);
             account.setNumber("002");
             account.setBalance(BigDecimal.valueOf(500000));
-            accountDB.put(2, account);
+            accountDB.put(2L, account);
         }
         {
             BankAccount account = new BankAccount();
-            account.setId(3);
+            account.setId(3L);
             account.setNumber("003");
             account.setBalance(BigDecimal.valueOf(700000));
-            accountDB.put(3, account);
+            accountDB.put(3L, account);
         }
 
     }
@@ -51,12 +51,19 @@ public class BankAccountInMemoryDB implements BankAccountGateway {
         return null;
     }
 
-    public void save(BankAccount entity) {
-        System.out.println("Save BankAccount");
-        accountDB.put(entity.getId(), entity);
+    @Override
+    public Long save(BankAccount entity) {
+        try {
+            System.out.println("Save BankAccount");
+            accountDB.put(entity.getId(), entity);
+            return 1L;
+        } catch (Exception e) {
+            return 0L;
+        }
     }
 
-    public BankAccount getById(int id) {
+
+    public BankAccount findOne(Long id) {
         return null;
     }
 
